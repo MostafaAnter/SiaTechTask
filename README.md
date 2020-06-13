@@ -1,4 +1,7 @@
 # Sia Teck Task
+
+<img src="https://media.giphy.com/media/jpKKVXRxkYC2j8RZFe/giphy.gif" width="300">
+
 ## What am gonna to be use to achomplish that task
 ### To avoid 64k functions problem and get smaller apk
 - Enables code shrinking, obfuscation, and optimization for only
