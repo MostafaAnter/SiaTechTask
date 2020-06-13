@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="chatItem"
+            type="app.siatechtask.models.AnswerResponse" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/parent_list_map"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{chatItem.image.equalsIgnoreCase(``)? View.GONE : View.VISIBLE}"
+            app:imageUrl="@{chatItem.image}"/>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/answer_background"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@{chatItem.answer}"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+
+
+    </FrameLayout>
+</layout>
+
+
